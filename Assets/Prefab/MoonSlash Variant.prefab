@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7353331011497667578
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5966266951174931402, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966266951174931402, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: stopAction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966266951174931402, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: moveWithTransform
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7650464620963389931, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_Name
+      value: MoonSlash Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.6700006
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7743817454593044574, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 2966928129973416814, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+    - {fileID: 8877797298723479758, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+    - {fileID: 7785983826167181636, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+    - {fileID: 7021729464448178142, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 069a3d7c1105b7a4ba0826827fec6e11, type: 3}
