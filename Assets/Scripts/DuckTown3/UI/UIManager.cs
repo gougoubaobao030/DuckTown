@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     public void HideShopPanel()
     { 
         shopPanel.gameObject.SetActive(false);
+        InteractionEvents.TriggerInteractionEnded();
     }
 
     public void ToggleInventroyPanel()

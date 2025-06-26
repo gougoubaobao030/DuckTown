@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* 左边内容 */
+.left {
+  width: 68%;
+  font-size: 12pt;
+}
+
+/* 右边图片 */
+.right {
+  width: 28%;
+  text-align: center;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,43 @@
+﻿/* 分栏布局 */
+.resume-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .main-content {
+    flex: 7;  /* 70% */
+    padding-right: 15px;
+  }
+  
+  .sidebar {
+    flex: 3;  /* 30% */
+    border-left: 1px solid #eee;
+    padding-left: 15px;
+  }
+  
+  /* 强制分页 */
+  .page-break {
+    page-break-after: always;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  /* 图片样式 */
+  .sidebar img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+  }
+  
+  /* 打印优化 */
+  @media print {
+    body {
+      margin: 0;
+      padding: 1cm;
+      font-size: 12pt;
+    }
+    .page-break {
+      margin-top: 2cm;
+    }
+  }

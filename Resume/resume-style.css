@@ -1,0 +1,13 @@
+body {
+  font-family: "Microsoft YaHei", "Noto Sans", "Noto Sans SC", "Noto Sans JP", "Meiryo", sans-serif !important;
+  font-size: 12pt;
+  color: #000;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Noto Sans", "Noto Sans SC", "Noto Sans JP", sans-serif !important;
+  font-weight: bold;
+  color: #222;
+}
+

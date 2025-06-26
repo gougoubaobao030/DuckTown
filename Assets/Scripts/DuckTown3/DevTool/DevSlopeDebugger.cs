@@ -44,5 +44,6 @@ public class DevSlopeDebugger : MonoBehaviour, IDevToolModule
     {
         if (!showInGUI) return;
         GUILayout.Label($"[Slope] 当前坡度角: {currentSlope:F1}°");
+        //GUILayout.Label("[Blink Debugger]");
     }
 }

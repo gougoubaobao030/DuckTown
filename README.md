@@ -1,4 +1,4 @@
-# 🦆 DuckTown Adventure
+﻿# 🦆 DuckTown Adventure
 
 ---
 
@@ -57,7 +57,7 @@ The goal is to grow this into a mid-sized, complete game project with scalable s
 
 ---
 
-## 🎮 Features | 核心功能特色
+## 🎮 Features | 核心功能特色（基本功能与技术）
 
 - 🧠 **状态机控制系统**
   - 支持 Idle / Move / Jump / Fall / Dash / Dodge 状态
@@ -134,10 +134,18 @@ MyUnityProject/
 ---
 
 ## **遇到的困难和解决方式**
+- 脱离教程，100%原创代码
 - 角色物理运动惯性模拟问题
 - 架构设计的的平衡，如何设计优雅又没有过度设计
 - 等等杂项
 
+---
+
+## **Coming Soon**
+- 任务模块
+- 对话系统
+- 存档系统
+- AI 行为树
 ---
 
 ## ⚠️ Notes
@@ -146,3 +154,9 @@ MyUnityProject/
 - License: None / All rights reserved.  
   If you wish to reuse parts of this project, please contact the author.
 
+## ✅ 2025/06/26 更新日志
+
+- 整合交互系统与状态机系统，支持一过性交互（如拾取）与状态型交互（如对话）
+- 新增命令模式架构，支持交互逻辑解耦
+- 状态切换流程优化，支持交互中移动退出、自动跳回 Idle
+- UI 提示逻辑封装、状态同步机制完成

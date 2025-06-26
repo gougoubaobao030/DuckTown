@@ -7197,6 +7197,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8196188518890941807, guid: 43c4b6b984532654cb9ce18648bc846b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1247981237}
+    - targetCorrespondingSourceObject: {fileID: 8196188518890941807, guid: 43c4b6b984532654cb9ce18648bc846b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1247981243}
   m_SourcePrefab: {fileID: 100100000, guid: 43c4b6b984532654cb9ce18648bc846b, type: 3}
 --- !u!224 &323096433 stripped
 RectTransform:
@@ -8496,8 +8499,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1247981227}
-        m_TargetAssemblyTypeName: DuckInteractor, Assembly-CSharp
-        m_MethodName: TryInteract
+        m_TargetAssemblyTypeName: DuckInteractor3, Assembly-CSharp
+        m_MethodName: TryExcuteInteract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9311,7 +9314,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 6b1162ef5280e4d408d75889dc1411a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9410,6 +9413,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8484069592235595194, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
+      propertyPath: m_Convex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10494,6 +10501,8 @@ GameObject:
   - component: {fileID: 1058880528}
   - component: {fileID: 1058880529}
   - component: {fileID: 1058880530}
+  - component: {fileID: 1058880531}
+  - component: {fileID: 1058880532}
   m_Layer: 0
   m_Name: DevToolBox
   m_TagString: Untagged
@@ -10530,6 +10539,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moduleSources:
   - {fileID: 1058880530}
+  - {fileID: 1058880531}
+  - {fileID: 1058880532}
 --- !u!114 &1058880530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10547,8 +10558,42 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayLength: 3
-  showInScene: 1
-  showInGUI: 1
+  showInScene: 0
+  showInGUI: 0
+--- !u!114 &1058880531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058880527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7786cec543906f047849fdd411085d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1247981238}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 456
+  showInGUI: 0
+  showInGizmo: 0
+--- !u!114 &1058880532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058880527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aba3ff6938d8b74993d0073bfa975e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duckController: {fileID: 1247981237}
+  interactManager: {fileID: 1247981227}
+  ShowGuI: 1
+  ShowGizmos: 1
 --- !u!1001 &1073722277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11699,11 +11744,31 @@ MonoBehaviour:
   isJumpFromIdleState: 0
   <LastCameraRotation>k__BackingField: {x: 0, y: 0, z: 0, w: 0}
   DebugCurrentState: 
+  AfterImagePrefab: {fileID: 1747143183392187897, guid: bd058f5775c7b0742898bd15ae37ba0d, type: 3}
+  blinkDodgeObstacleLayer:
+    serializedVersion: 2
+    m_Bits: 456
+  blinkDodgeGroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  interactManager: {fileID: 1247981227}
 --- !u!4 &1247981238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7387308561804503037, guid: 43c4b6b984532654cb9ce18648bc846b, type: 3}
   m_PrefabInstance: {fileID: 315959017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1247981243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448780322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3ec3723dc74eec4980b29bbea5d3392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1258212463 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6699069362794153288, guid: d36307ce97d5fbb4287c295fc018c909, type: 3}

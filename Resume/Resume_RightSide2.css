@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+.sidebar {
+  width: 30%;
+  background-color: #f0f0f0;
+}
+.main {
+  width: 70%;
+  padding-left: 20px;
+}
+
+@media print {
+  .page-break {
+    page-break-after: always;
+    height: 0;
+    visibility: hidden;
+  }
+}

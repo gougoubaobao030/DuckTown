@@ -61,6 +61,20 @@ public class DuckControllerV3 : MonoBehaviour
     //debug: 查看状态
     public string DebugCurrentState;
 
+    //module injection
+    public IDuckStatusEvent duckStatusEvent { get; private set; }
+    public GameObject AfterImagePrefab;
+
+    //闪现层控制 啊真的可以混合
+    public LayerMask blinkDodgeObstacleLayer;
+    public LayerMask blinkDodgeGroundLayer;
+
+    //伟大的交互系统接拢Time
+    public DuckInteractor3 interactManager;
+    public bool isInteractStarted { get; set; } = false;
+    public bool isInteractEnded { get; set; } = false;
+    public IInteractable CurrentInteractTarget;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -71,6 +85,9 @@ public class DuckControllerV3 : MonoBehaviour
 
         duckCharacterController = GetComponent<CharacterController>();
         cameraController = Camera.main.GetComponent<CameraControllter>();
+
+        //get modulue
+        duckStatusEvent = GetComponent<DuckStatusEvents>();
 
         //duckStateMachine = new DuckStateMachine();
         DuckFactoryRegister factory = new DuckFactoryRegister(this);
@@ -84,6 +101,26 @@ public class DuckControllerV3 : MonoBehaviour
     {
         //duckStateMachine.ChangeState(new DuckIdleState(this));
         duckFactoryStateMachine.ChangeState<DuckIdleState>();
+
+        //register interact start/end event
+        InteractionEvents.OnInteractionStartWithTarget += InteractionEvents_OnInteractionStartWithTarget;
+        InteractionEvents.OnInteractionEnded += InteractionEvents_OnInteractionEnded;
+    }
+
+    private void InteractionEvents_OnInteractionStartWithTarget(IInteractable obj)
+    {
+        CurrentInteractTarget = obj;
+        isInteractStarted = true;
+    }
+
+    private void InteractionEvents_OnInteractionStarted()
+    {
+        isInteractStarted = true;
+    }
+
+    private void InteractionEvents_OnInteractionEnded()
+    {
+        isInteractEnded = true;
     }
 
     private void Update()

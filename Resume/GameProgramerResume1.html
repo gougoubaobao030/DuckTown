@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&#x6c88;&#x627f;&#x8bda; &verbar; &#x76ee;&#x6807;&#x5c97;&#x4f4d;&#xff1a;&#x6e38;&#x620f;&#x7a0b;&#x5e8f;&#x5458;&#xff08;&#x613f;&#x610f;&#x8c03;&#x6574;&#xff09;</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: 'Microsoft YaHei', 'Meiryo', 'Sarasa UI SC', 'Noto Sans JP', sans-serif;
+                font-size: 14px;
+                line-height: 1.5;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <style>
+/* 分栏布局 */
+.resume-container {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+  
+.container.reversed {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-top: 200px;
+}
+
+  .main-content {
+    flex: 7;  /* 70% */
+    padding-right: 15px;
+  }
+  
+  .secondMain{
+       flex: 7;  /* 30% */
+        padding-right: 1px;
+        margin-left: 20px;
+  }
+
+
+  .sidebar {
+      flex: 3;  /* 30% */
+    border-left: 1px solid #eee;
+    padding-left: 15px;
+  }
+  
+  .girlfriend
+  {
+    flex: 3;  /* 70% */
+    border-right: 1px solid #eee;
+    margin-top: 40px;
+    padding-right: 20px;
+  }
+
+  /* 强制分页 */
+  .page-break {
+    page-break-after: always;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  /* 图片样式 */
+  .sidebar img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  
+  /* 打印优化 */
+  @media print {
+    body {
+      margin: 0;
+      padding: 1cm;
+      font-size: 12pt;
+    }
+    .page-break {
+      margin-top: 2cm;
+    }
+
+  .section-title {
+    font-weight: bold;
+    margin-top: 15px;
+    font-family: sans-serif;
+  }
+
+  .tagbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: sans-serif;
+    margin-top: 10px;
+  }
+  
+  .tag {
+    background-color: #eee;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+}
+</style>
+<h1 id="沈承诚--目标岗位游戏程序员愿意调整">沈承诚 | 目标岗位：游戏程序员（愿意调整）</h1>
+<!-- 分栏布局 -->
+<div class="resume-container">
+  <!-- 左侧栏（70%） -->
+  <div class="main-content">
+<h2 id="-简介">📌 简介</h2>
+<p>自学编程。热衷 C#/Unity/C /C++游戏开发。追求功能实用，符合用户真实需求；架构优雅、系统模块化；对性能优化充满兴趣。希望和有趣的人做有趣的事。</p>
+<h2 id="-cunityc项目">🧪 C#/Unity/C++项目</h2>
+<h3 id="独立制作cunity3d-rpg---duck-town">独立制作C#Unity3D RPG - 🐥Duck Town</h3>
+<p>🕹️ 架构清晰优雅的中型3D RPG 项目:</p>
+<ul>
+<li>面向对象状态机/ 自制第三人称相机</li>
+<li>接入 技能/ 交互/ 背包/ 商店/ 金币 等多个系统</li>
+<li>实现对象池、数据驱动，事件系统、模块解耦</li>
+<li>使用 工厂/ 策略/ 单例/ 观察者/ 依赖注入 等设计模式</li>
+<li>CG性能优化/自制调试工具/基本Shader Graph</li>
+<li>🔗 <a href="https://github.com/xxx">GitHub 源码</a>｜📹 <a href="https://youtube.com/xxx">演示视频</a></li>
+</ul>
+<h3 id="游戏引擎底层原理相关c-demo">游戏引擎底层原理相关C++ Demo</h3>
+<p>💻 包括：</p>
+<ul>
+<li>C++/ SDL2 射击小游戏(基本功能完整)</li>
+<li>OpenGL 2D/3D 渲染 Demo</li>
+<li>多线程线程池 Demo</li>
+<li>事件调度器Demo</li>
+</ul>
+<h2 id="-熟悉算法与数据结构">🧩 熟悉算法与数据结构</h2>
+<ul>
+<li>
+<p>截至目前：LeetCode刷题262题</p>
+</li>
+<li>
+<p>重视实际实现，熟悉常用数据结构 API</p>
+</li>
+<li>
+<p>对时间空间复杂度（Big-O）有敏感度</p>
+</li>
+<li>
+<p>以算法训练构建代码信心与系统思维</p>
+</div>
+<!-- 右侧边栏（30%） -->
+<div class="sidebar">
+</li>
+</ul>
+<p><img src="file:///d:\UntiyArt\DuckDuckAdventure1\Resume\gougou.png" alt="个人照片"></p>
+<p><strong>🏷️ 技术栈</strong></p>
+<!--
+| 类别     | 技能                         |
+|----------|------------------------------|
+| 编程语言 | C#, C/C++, Python              |
+| 游戏引擎 | Unity, SDL2, OpenGL          |
+| 工具     | Git, Visual Studio, VSCode   |
+| 平台     | Windows, Linux, Raspberry4    |
+|简历制作| Markdown, HTML, CSS, Pandoc |
+|其他涉猎| Qt, Bash, CLI, Vim, SSH, TCP/IP , Sock5|
+
+-->
+<div class="section-title">▼ 编程语言</div>
+<div class="tagbox">
+  <span class="tag">C#</span>
+  <span class="tag">C/C++</span>
+  <span class="tag">多线程</span>
+</div>
+<div class="section-title">▼ 游戏/图形引擎</div>
+<div class="tagbox">
+  <span class="tag">Unity3D</span>
+  <span class="tag">Unity2D</span>
+  <span class="tag">OpenGL</span>
+  <span class="tag">SDL2</span>
+</div>
+<div class="section-title">▼ 工具链</div>
+<div class="tagbox">
+  <span class="tag">Git</span>
+  <span class="tag">GitHub</span>
+  <span class="tag">VSCode</span>
+  <span class="tag">Visual Studio</span>
+</div>
+<div class="section-title">▼ 平台/系统</div>
+<div class="tagbox">
+  <span class="tag">Linux Ubuntu</span>
+  <span class="tag">Raspberry Pi</span>
+</div>
+<div class="section-title">▼ 本简历</div>
+<div class="tagbox">
+  <span class="tag">MarkDown</span>
+  <span class="tag">HTML</span>
+  <span class="tag">CSS</span>
+  <span class="tag">Pandoc</span>
+</div>
+<div class="section-title">▼ 其他涉猎</div>
+<div class="tagbox">
+  <span class="tag">Qt</span>
+  <span class="tag">.NET Framework</span>
+  <span class="tag">SQL/MySQL/SQLite</span>
+  <span class="tag">Bash</span>
+  <span class="tag">SSH</span>
+  <span class="tag">TCP/IP</span>
+  <span class="tag">Vim</span>
+</div>
+  </div>
+</div>
+<!-- 强制分页 -->
+<div class="page-break"></div>
+<div class="container reversed">
+    <div class="girlfriend">
+<h3 id="基本信息">📌基本信息</h3>
+<p>📧 <a href="mailto:gougoubaobao030@gmail.com">gougoubaobao030@gmail.com</a><br>
+📱 070-1561-1919</p>
+<h3 id="学历资格相关">📚学历资格相关</h3>
+<p><strong>2010/09 - 2014/06</strong><br>
+宁波大学（创新班）</p>
+<!--中国の「一流大学計画」対象校-->    
+<p>会计学学士学位</p>
+<p><strong>2016</strong><br>
+为打破思维和环境局限<br>
+自学日语</p>
+<p><strong>2017/12</strong><br>
+日语N1证书</p>
+<p><strong>2024/09-至今</strong><br>
+东京环球日本语言学校<br>
+商务日语班</p>
+<p><strong>英语相关</strong><br>
+计算机多用英语资料</p>
+<h3 id="兴趣">🌟兴趣</h3>
+<p>大哭 大笑<br>
+</div></p>
+  <div class="secondMain">
+<h3 id="-工作与编程自学经历">💼 工作与编程自学经历</h3>
+<ul>
+<li>
+<p><strong>2014 - 2020</strong> | 会计相关工作</p>
+</li>
+<li>
+<p><strong>2017</strong> | 以因特网内容为主导初学IT</p>
+<ul>
+<li>对Linux运维理论有一定程度了解</li>
+<li>对网络通信技术/协议有所了解</li>
+<li>为寻找突破口，大量试行错误</li>
+</ul>
+</li>
+<li>
+<p><strong>2022</strong> | 自制轻小说风格人狼游戏</p>
+<ul>
+<li>Graphics View Framework</li>
+<li>使用 emit/slot 信号槽机制</li>
+<li>感受到游戏编程的单纯的快乐</li>
+</ul>
+</li>
+<li>
+<p><strong>2022</strong> | MushRoom游戏研学工作室</p>
+<ul>
+<li>参与团队制作角色管理系统</li>
+<li>C# .NET Framwork MySQL</li>
+<li>实现CRUD，MVC, 了解SOLID</li>
+<li>被“良好架构带来的掌控感”吸引</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="--职业性格原点">🌱  职业性格原点</h3>
+<ul>
+<li>平庸资质，终以数学成绩第二第一，解多数创新题，回报高中恩师</li>
+<li>相信在全面掌握基础之后，能达到深刻理解与独立创新</li>
+</ul>
+<h3 id="-编程观与职业观">🧠 编程观与职业观</h3>
+<ul>
+<li>编程是修行，并不轻松，但只有在修行中才能获得自由</li>
+<li>自幼将工作视为生存价值，从“做喜欢的事“，逐步体悟为, &quot;在做事中学会喜欢&quot;</li>
+</ul>
+<h3 id="-留日动机">🌸 留日动机</h3>
+<ul>
+<li>
+<p>童年≈红白机</p>
+</li>
+<li>
+<p>钦佩工匠精神，渴望国际化视野</p>
+</li>
+<li>
+<p>能即时参加线下活动，如Tokyo Indies/TGS/BitSummit，向优秀的人学习</p>
+</div>
+</li>
+</ul>
+</div>
+
+            
+            
+        </body>
+        </html>

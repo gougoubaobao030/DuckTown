@@ -28,7 +28,14 @@ public class UI_DialogueManager3 : MonoBehaviour
 
     public void CloseDialoguePanel()
     {
-        gameObject.SetActive(false);
-        InteractionEvents.TriggerInteractionEnded();
+        if (gameObject.activeSelf)
+        {
+            gameObject.SetActive(false);
+            InteractionEvents.TriggerInteractionEnded();
+        }
+        else
+        {
+            Debug.Log("CloseDialoguePanel 被调用，但面板已关闭，跳过。");
+        }
     }
 }

@@ -10,4 +10,8 @@ public interface IInteractable
 
     string GetInteractPrompt(); //文字打开箱子 拾取卷轴，而不是清一色交互
     bool CanInteract();
+
+    InteractMode InteractMode { get; }
 }
+
+public enum InteractMode { OneShot, State }
