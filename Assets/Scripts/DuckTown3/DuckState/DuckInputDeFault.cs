@@ -12,4 +12,6 @@ public class DuckInputDefault : IDuckInput
     public bool isDashButtonPressed => Input.GetKeyDown(KeyCode.LeftShift);
 
     public bool isBlinkDodgeButtonPressed => Input.GetKeyDown(KeyCode.LeftAlt);
+
+    public bool isInteractButtonPressed => Input.GetKeyDown(KeyCode.E);
 }

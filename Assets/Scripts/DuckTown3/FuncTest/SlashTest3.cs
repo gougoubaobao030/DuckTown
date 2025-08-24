@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
-public class SlashTest3 : MonoBehaviour
+namespace DuckTown3.SkillSystemV1
 {
-    public GameObject ColdMoon;
-    void Update()
+    public class SlashTest3 : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        { 
-            GameObject coldMoon = Instantiate(ColdMoon, transform.position, Quaternion.identity);
+        public GameObject ColdMoon;
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                GameObject coldMoon = Instantiate(ColdMoon, transform.position, Quaternion.identity);
+            }
         }
     }
 }

@@ -6,5 +6,5 @@ public class SceneNode : MonoBehaviour
 
     //起始三行
     //最多十行
-    [TextArea(3, 10)]public string readme;
+    [TextArea(10, 20)]public string readme;
 }

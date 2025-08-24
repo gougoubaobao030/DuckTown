@@ -108,7 +108,7 @@ public class DuckInteractor3 : MonoBehaviour
         }
 
         var mode = interactable.InteractMode;
-        Debug.Log("瞬时交互或者状态交互： " + mode);
+        //Debug.Log("瞬时交互或者状态交互： " + mode);
         commandRounter.ExcuteCommand(mode, interactable);
 
     }

@@ -87,7 +87,8 @@ public class DuckControllerV3 : MonoBehaviour
         cameraController = Camera.main.GetComponent<CameraControllter>();
 
         //get modulue
-        duckStatusEvent = GetComponent<DuckStatusEvents>();
+        //duckStatusEvent = GetComponent<DuckStatusEvents>();
+        duckStatusEvent = new DuckStatusEvents();
 
         //duckStateMachine = new DuckStateMachine();
         DuckFactoryRegister factory = new DuckFactoryRegister(this);

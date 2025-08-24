@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class DuckStatusEvents : MonoBehaviour, IDuckStatusEvent
+public class DuckStatusEvents : IDuckStatusEvent
 {
     public event Action OnDodgeStarted;
     public event Action OnDodgeEnded;

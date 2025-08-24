@@ -35,6 +35,7 @@ public class BusinessManPotter : MonoBehaviour, IInteractable
         var lookDir = Duck3.instance.transform.position - transform.position;
         lookDir.y = 0;
         transform.rotation = Quaternion.LookRotation(lookDir);
+        //Quaternion.Slerp(transform.rotation, newRotation, 10.0f * Time.deltaTime);
     }
 
     private void Update()
