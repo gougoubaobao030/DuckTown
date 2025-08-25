@@ -19,7 +19,13 @@ public class UI_InventoryPanelV2 : MonoBehaviour
             slotPool = new ObjectPool<GameObject>(
                 createFunc: () => Instantiate(slotPrefab, gameObject.transform),
                 actionOnGet: go => go.SetActive(true),
-                actionOnRelease: go => go.SetActive(false),
+                //解决问题
+                //对象池重复使用时，text没有清空
+                actionOnRelease: go =>
+                {   
+                    go.GetComponent<SlotV2>().Clear();
+                    go.SetActive(false);
+                },
                 actionOnDestroy: go => Destroy(go),
                 collectionCheck: false,
                 defaultCapacity: 30,

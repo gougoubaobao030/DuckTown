@@ -5,6 +5,6 @@ public interface IInventorySystemV2
 {
     List<InventoryItemV2> inventoryItems { get; }
 
-    void AddItem(InventoryItemV2 item);
+    void AddItem(InventoryItemV2 item, int stack);
     void RemoveItem(InventoryItemV2 item);
 }

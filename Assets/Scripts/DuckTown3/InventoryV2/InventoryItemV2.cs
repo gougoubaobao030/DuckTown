@@ -3,6 +3,8 @@
 public class InventoryItemV2
 {
     public ItemData3 itemData;
+    //为什么是实例管呢
+    //答：因为这个是实时的
     public int stack;
 
     public InventoryItemV2(ItemData3 itemData3, int stack = 1)
