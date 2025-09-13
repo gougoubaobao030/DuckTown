@@ -11,6 +11,10 @@ namespace DuckTown3.SkillSystemV2
 
         [Header("CD")]
         public float CooldownTime;
+
+        [Header("Combat")]
+        public float Damage;
+
         public abstract ISkill CreateSkill(Transform casterPointer, ISkillInputProvider input);
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System.Dynamic;
 using UnityEngine;
+using DuckTown3.ObjectPool;
 
 public class ItemPickUpInteraction : MonoBehaviour, IInteractable
 {
-    public GameObject blashMultiColorPrefab;
+    //public GameObject blashMultiColorPrefab;
+    public GameObject blastMultiColor;
     public ItemData3 pickableItem;
 
     private IReceiver receiver;
@@ -28,7 +30,9 @@ public class ItemPickUpInteraction : MonoBehaviour, IInteractable
     public void Interact()
     {
         receiver.ReceiverItem(pickableItem);
-        Instantiate(blashMultiColorPrefab, transform.position, Quaternion.identity);
+        //Instantiate(blashMultiColorPrefab, transform.position, Quaternion.identity);
+        var blast = ObjectPoolManager.Instance.Get(blastMultiColor);
+        blast.transform.position = transform.position;
         Destroy(gameObject);
         
     }

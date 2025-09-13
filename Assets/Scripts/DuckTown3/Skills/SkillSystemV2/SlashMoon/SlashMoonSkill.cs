@@ -41,7 +41,7 @@ namespace DuckTown3.SkillSystemV2
                     IAttackable enemy = colliders[i].GetComponent<IAttackable>();
                     if (enemy != null)
                     {
-                        enemy.TakeDamage();
+                        enemy.TakeDamage(data.Damage);
                     }
                 }
             }

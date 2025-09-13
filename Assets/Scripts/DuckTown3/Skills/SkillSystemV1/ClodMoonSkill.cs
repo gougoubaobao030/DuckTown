@@ -26,7 +26,7 @@ namespace DuckTown3.SkillSystemV1
                 {
                     if (projectile != null)
                     {
-                        projectile.Init(maxFlyDistance, flySpeed);
+                        //projectile.Init(maxFlyDistance, flySpeed);
                     }
                 }
 

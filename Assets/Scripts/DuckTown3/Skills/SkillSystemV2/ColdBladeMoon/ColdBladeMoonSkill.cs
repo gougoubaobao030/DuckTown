@@ -25,7 +25,7 @@ namespace DuckTown3.SkillSystemV2
             var projectile = coldMoon.GetComponent<ColdMoonBladeProjectile3>();
             if (projectile != null)
             {
-                projectile.Init(data.maxFlyDistance, data.flySpeed);
+                projectile.Init(data);
             }
 
             TriggerCooldown();

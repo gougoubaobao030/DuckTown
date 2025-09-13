@@ -2,6 +2,8 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using DuckTown3.ObjectPool;
+
 
 public class EnemyYellowGay3 : MonoBehaviour, IAttackable
 {
@@ -53,9 +55,11 @@ public class EnemyYellowGay3 : MonoBehaviour, IAttackable
         transform.rotation = spawnRpt;
     }
 
-    public void TakeDamage()
+    public void TakeDamage(float amout)
     {
-        Instantiate(blastMultiColor, blastPointer.position, Quaternion.identity);
+        //Instantiate(blastMultiColor, blastPointer.position, Quaternion.identity);
+        var blast = ObjectPoolManager.Instance.Get(blastMultiColor);
+        blast.transform.position = blastPointer.position;
         //Destroy(gameObject);
         OnMinionDied?.Invoke(spawnPos, spawnRpt, 3.0f);
         gameObject.SetActive(false);

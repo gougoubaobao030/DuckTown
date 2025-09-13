@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using DuckTown3.ObjectPool;
+using DuckTown3.SkillSystemV2;
 
 
 public class ColdMoonBladeProjectile3 : MonoBehaviour
@@ -8,15 +9,17 @@ public class ColdMoonBladeProjectile3 : MonoBehaviour
     private float flySpeed;
     private Vector3 startPos;
     public GameObject hitEffect;
+    private float damage;
 
     //for cache 
     private float maxDistanceSqr;
 
-    public void Init(float maxDistance, float flySpeed)
+    public void Init(ColdBladeMoonSO data)
     {
-        this.maxDistance = maxDistance;
-        this.flySpeed = flySpeed;
+        this.maxDistance = data.maxFlyDistance;
+        this.flySpeed = data.flySpeed;
         startPos = transform.position;
+        damage = data.Damage;
     }
 
     private void Start()
@@ -42,7 +45,7 @@ public class ColdMoonBladeProjectile3 : MonoBehaviour
         IAttackable enemy = other.gameObject.GetComponent<IAttackable>();
         if (enemy != null)
         {
-            enemy.TakeDamage();
+            enemy.TakeDamage(damage);
         }
 
         //Instantiate(hitEffect, other.ClosestPoint(transform.position), Quaternion.identity);

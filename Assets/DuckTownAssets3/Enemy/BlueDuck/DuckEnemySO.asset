@@ -16,6 +16,7 @@ MonoBehaviour:
   pauseAtPatrolPoint: 0
   restTime: 4
   gravity: -10
+  HealthBar: {fileID: 3354677386836261841, guid: 1fa25ac63ab99d44581201b148808aab, type: 3}
   isEnterChasing: 1
   chaseSpeed: 6
   chaseDistance: 19

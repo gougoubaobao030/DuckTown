@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 2a1265ae4655d044e9c1557405696861, type: 3}
   CooldownTime: 2
+  Damage: 399
   SkillName: 
   Description: 
   MushroomPrefab: {fileID: 1869414530173591087, guid: 8301c0aa578563f4e8c47a55c403515e, type: 3}
   YForce: 2
   MushroomSpeed: 10
   ExplosionDelay: 3.6
-  Damage: 30
   AttackRadius: 8
   ExplosionVFXPrefab: {fileID: 6686509806015282819, guid: adfd48783fa9d3341970433cdcaf4789, type: 3}
   AttackableLayer:

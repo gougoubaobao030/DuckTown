@@ -21,7 +21,7 @@ namespace DuckTown3.SkillSystemV2
         [Header("CastData")]
         public float DamageDelayTime = 1.0f;
         public float Radius = 3.0f;
-        public float Damage = 50.0f;
+        //public float Damage = 50.0f;
         public float ShadowMaxDistance = 100.0f;
         public LayerMask DamageLayer;
         public LayerMask ShadowLayer;

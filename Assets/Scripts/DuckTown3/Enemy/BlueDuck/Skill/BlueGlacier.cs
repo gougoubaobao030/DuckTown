@@ -44,7 +44,7 @@ namespace DuckTown3.Enemy
 
                 Vector3 dirToTarget = (targetPos - origins).normalized;
 
-                Debug.Log("Angle: " + Vector3.Angle(forward, dirToTarget));
+                //Debug.Log("Angle: " + Vector3.Angle(forward, dirToTarget));
 
                 if (Vector3.Angle(forward, dirToTarget) <= (Angle / 2))
                 {

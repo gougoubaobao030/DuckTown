@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using DuckTown3.ObjectPool;
+using DuckTown3.UI;
 
 namespace DuckTown3
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : MonoBehaviour, IAttackable
     {
         [SerializeField] private Transform yellowDuck;
         public Transform YellowDuck => yellowDuck;
@@ -63,6 +65,8 @@ namespace DuckTown3
         [SerializeField] private Transform skillPointer;
         public Transform SkillPointer => skillPointer;
 
+        //healthbar
+        private GameObject healthBar;
         private void Awake()
         {
             //在awake之前，inspector拖入的东东已经生成好了
@@ -138,5 +142,30 @@ namespace DuckTown3
             }
         }
 
+        //有待模块化
+        //temp
+        //有很多要修改的地方
+        private UI_EnemyHealthBar healthBarScript;
+        private float maxHealth = 1999.0f;
+        private float currentHealth = 1999f;
+
+        public void TakeDamage(float amout)
+        {
+            //Debug.Log("Yellow Duck is Coming");
+            if (healthBar == null)
+            {
+                healthBar = ObjectPoolManager.Instance.Get(configSO.HealthBar);
+                healthBar.transform.SetParent(WorldUICanvas.Instance.transform);
+
+                var script = healthBar.GetComponent<UI_EnemyHealthBar>();
+                script.Init(transform, Vector3.up * 2.5f);
+                healthBarScript = script;
+                //healthBar.transform.position = transform.position + Vector3.up * 2.0f;
+            }
+            currentHealth -= amout;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+            healthBarScript?.OnDamageTaked(currentHealth, maxHealth);
+        }
     }
 }

@@ -10,12 +10,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3893194426856639197, guid: 5b8795ec470c4154aa3914f178646ac2, type: 3}
       propertyPath: m_Name
-      value: Hp Variant
+      value: Mp
       objectReference: {fileID: 0}
     - target: {fileID: 4074320913849707172, guid: 5b8795ec470c4154aa3914f178646ac2, type: 3}
       propertyPath: pickableItem
       value: 
       objectReference: {fileID: 11400000, guid: 490257c08495abf49b646a8a8a79ea6d, type: 2}
+    - target: {fileID: 4074320913849707172, guid: 5b8795ec470c4154aa3914f178646ac2, type: 3}
+      propertyPath: blastMultiColor
+      value: 
+      objectReference: {fileID: 9203632501076719776, guid: 14a782c5414866948931b821d8034d3a, type: 3}
     - target: {fileID: 7796618766783805716, guid: 5b8795ec470c4154aa3914f178646ac2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.63

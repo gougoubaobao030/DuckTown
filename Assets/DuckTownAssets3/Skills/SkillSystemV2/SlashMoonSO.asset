@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 7b34caca00a1514468b8d9cc005a43fc, type: 3}
   CooldownTime: 1
+  Damage: 99
   SkillName: SlashMoon
   Description: 
   SlashPrefab: {fileID: 875860592942500369, guid: 31f65cbbfd2f8b24ca4be571564c8b8d, type: 3}

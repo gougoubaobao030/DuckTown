@@ -46,10 +46,10 @@ namespace DuckTown3.Enemy
 
         public void OnAnimationEvent_AnimEnd()
         {
-            Debug.Log("Animation is End");
+            //Debug.Log("Animation is End");
             if (comboSkill.canCombo && comboSkill.nextSkill != null)
             {
-                Debug.Log("will go to combo");
+                //Debug.Log("will go to combo");
                 fsm.ChangeState(enemy.ComboState);
                 
             }
@@ -57,7 +57,7 @@ namespace DuckTown3.Enemy
             {
                 fsm.ChangeState(enemy.CoolDownState);
                 enemy.SkillManager.UnRegisterSkill();
-                Debug.Log("will go to cooldown");
+                //Debug.Log("will go to cooldown");
 
             }
         }

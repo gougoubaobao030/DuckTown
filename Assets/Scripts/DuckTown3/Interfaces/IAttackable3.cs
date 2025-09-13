@@ -2,5 +2,5 @@
 
 public interface IAttackable
 {
-    void TakeDamage();
+    void TakeDamage(float amout = 99);
 }

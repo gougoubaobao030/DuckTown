@@ -45,6 +45,9 @@ namespace DuckTown3.SkillSystemV2
                 mushroom.transform.position = shootPointer;
                 mushroom.transform.rotation = caster.rotation;
 
+                var script = mushroom.GetComponent<MushroomBoom>();
+                script.InjectData(data);
+
                 Rigidbody rb = mushroom.GetComponent<Rigidbody>();
 
                 Vector3 throwDir = caster.forward * 1.0f + caster.up * data.YForce;

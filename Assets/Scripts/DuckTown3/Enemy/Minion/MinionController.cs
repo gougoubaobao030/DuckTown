@@ -29,6 +29,7 @@ namespace DuckTown3
         private void Awake()
         {
             //spawnPoint = transform.position;
+            //Debug.LogWarning("Minon Awake now");
         }
 
         private void OnEnable()
@@ -37,6 +38,7 @@ namespace DuckTown3
             //这种重置就让人觉得很妙
             //幂等性
             currentState = MinionState.Idle;
+            //Debug.LogWarning("Minion enable now");
         }
 
         private void OnDisable()
@@ -44,11 +46,13 @@ namespace DuckTown3
             //好的，不知道的时候不要瞎搞
             //agent.ResetPath();
             animator.SetBool("isAttack", false);
+            //Debug.LogWarning("Minion disable now");
         }
 
         private void Start()
         {
             animator.Play("MinionIdle");
+            //Debug.LogWarning("Minion start now");
         }
 
         float dist;

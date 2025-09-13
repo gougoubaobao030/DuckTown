@@ -12,6 +12,7 @@ namespace DuckTown3.SkillSystemV2
         [SerializeField] private float explosionRadius = 8.0f;
         [SerializeField] private LayerMask boomLayer;
 
+        private float damage;
         private Coroutine countdownCoroutine;
 
         //防御性exploded, 但在这里我还没感觉到实际意义。
@@ -27,6 +28,11 @@ namespace DuckTown3.SkillSystemV2
         private void Start()
         {
             //coroutine moved to onenable
+        }
+
+        public void InjectData(MushroomBoomSO data)
+        { 
+            damage = data.Damage;
         }
 
         IEnumerator DelayExplosion()
@@ -62,7 +68,7 @@ namespace DuckTown3.SkillSystemV2
                 IAttackable enemy = hit.gameObject.GetComponent<IAttackable>();
                 if (enemy != null)
                 {
-                    enemy.TakeDamage();
+                    enemy.TakeDamage(damage);
                 }
             }
 

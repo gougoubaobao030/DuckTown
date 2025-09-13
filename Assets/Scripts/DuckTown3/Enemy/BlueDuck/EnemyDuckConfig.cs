@@ -11,6 +11,7 @@ namespace DuckTown3
         public bool pauseAtPatrolPoint = false;
         public float restTime = 4.0f;
         public float gravity = -10.0f;
+        public GameObject HealthBar;
 
         [Header("Chase Data")]
         public bool isEnterChasing = true;

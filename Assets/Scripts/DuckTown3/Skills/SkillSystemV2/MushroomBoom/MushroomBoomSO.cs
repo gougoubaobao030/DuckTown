@@ -23,7 +23,7 @@ namespace DuckTown3.SkillSystemV2
 
         [Header("BoomData")]
         public float ExplosionDelay = 3.6f;
-        public float Damage = 30.0f;
+        //public float Damage = 30.0f;
         public float AttackRadius = 8.0f;
         public GameObject ExplosionVFXPrefab;
         public LayerMask AttackableLayer;
