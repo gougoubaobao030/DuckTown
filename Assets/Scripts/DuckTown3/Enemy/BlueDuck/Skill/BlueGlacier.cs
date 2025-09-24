@@ -52,6 +52,7 @@ namespace DuckTown3.Enemy
                     if (target != null)
                     {
                         target.TakeDamage(damage);
+                        Debug.Log("But it take damage");
                     }
                 }
             }

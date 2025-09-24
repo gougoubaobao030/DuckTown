@@ -1,5 +1,6 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem.Editor;
 using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
@@ -31,6 +32,9 @@ public class CameraControllter : MonoBehaviour
     private float invertXVal => invertX ? -1f : 1f;
     private float invertYVal => invertY ? -1f : 1f;
 
+    //UI controller 避免拖动UI的时候相机乱动
+    public bool isDraggingUI = false;
+
     void LateUpdate()
     {
         HandleInput();
@@ -39,6 +43,14 @@ public class CameraControllter : MonoBehaviour
 
     void HandleInput()
     {
+        //技能UI的时候就不要乱动了
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if (isDraggingUI)  return;
+
         // 缩放滚轮
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         FollowDistance += scroll * -2.0f;

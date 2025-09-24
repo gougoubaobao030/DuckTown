@@ -24,6 +24,7 @@ public class SlotV2 : MonoBehaviour
 
     public void Clear()
     { 
-        
+        //其他工作暂时用gameobject.setactive(false)暂时解决了，这个只是预留
+        //大概
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+//这个相当于Instance实例
 public class InventoryItemV2
 {
     public ItemData3 itemData;

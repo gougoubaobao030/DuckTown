@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using DuckTown3.ObjectPool;
 using DuckTown3.UI;
+using UnityEngine.AI;
 
 namespace DuckTown3
 {
@@ -14,6 +15,8 @@ namespace DuckTown3
         [SerializeField] private Animator animator;
         [SerializeField] private CharacterController cc;
         public CharacterController CC => cc;
+        [SerializeField] private NavMeshAgent agent;
+        public NavMeshAgent Agent => agent;
 
         [SerializeField] private EnemyDuckConfig configSO;
         public EnemyDuckConfig Config => configSO;
@@ -67,10 +70,18 @@ namespace DuckTown3
 
         //healthbar
         private GameObject healthBar;
+
+        //Tmp will do it into deadstate later
+        [SerializeField] private Transform returnPointer;
+        [SerializeField] private GameObject vanishEffect;
         private void Awake()
         {
             //在awake之前，inspector拖入的东东已经生成好了
             //但是awake并没有调用
+
+            //agent
+            agent.updatePosition = false;
+            agent.updateRotation = false;
 
             //module
             runtimeData = new EnemyRuntimeData(configSO);
@@ -146,8 +157,8 @@ namespace DuckTown3
         //temp
         //有很多要修改的地方
         private UI_EnemyHealthBar healthBarScript;
-        private float maxHealth = 1999.0f;
-        private float currentHealth = 1999f;
+        private float maxHealth = 999.0f;
+        private float currentHealth = 999f;
 
         public void TakeDamage(float amout)
         {
@@ -166,6 +177,34 @@ namespace DuckTown3
             currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
             healthBarScript?.OnDamageTaked(currentHealth, maxHealth);
+
+            //这是临时的，以后会做deadState
+            //另外会做篝火重生模式
+            if (currentHealth <= 0)
+            {
+                var vanish = ObjectPoolManager.Instance.Get(vanishEffect);
+                vanish.transform.position = returnPointer.position;
+
+                healthBar.SetActive(false);
+                Destroy(gameObject);
+            }
+        }
+
+        //Agent Interface. will be module later
+        public void SetDestination(Vector3 pos)
+        {
+            Agent.SetDestination(pos);
+        }
+
+        public void StopMoving()
+        {
+            Agent.ResetPath();
+        }
+
+        public bool IsAtDestination(float threshold = 0.5f)
+        {
+            if (!Agent.hasPath) return true;
+            return Agent.remainingDistance <= threshold;
         }
     }
 }

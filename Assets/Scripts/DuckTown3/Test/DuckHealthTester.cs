@@ -18,16 +18,16 @@ public class DuckHealthTester : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-        { 
-            TakeDamage(damageAmount);
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{ 
+            //TakeDamage(damageAmount);
+        //}
     }
 
-    public void TakeDamage(float amount)
-    { 
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
-        healthBar.SetHealth(currentHealth);
-    }
+    //public void TakeDamage(float amount)
+    //{ 
+        //currentHealth -= amount;
+        //currentHealth = Mathf.Clamp(currentHealth, 0f, maxHealth);
+        //healthBar.SetHealth(currentHealth);
+    //}
 }

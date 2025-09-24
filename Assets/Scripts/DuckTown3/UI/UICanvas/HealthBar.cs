@@ -12,11 +12,13 @@ namespace DuckTown3.UI
         {
             slider.maxValue = maxHealth;
             slider.value = maxHealth;
+            //Debug.Log("setmaxhealth used");
         }
 
         public void SetHealth(float health)
         {
             slider.DOValue(health, 0.3f);
+            //Debug.Log("sethealth used");
         }
     }
 }

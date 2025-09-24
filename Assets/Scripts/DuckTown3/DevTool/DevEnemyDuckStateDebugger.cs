@@ -8,7 +8,7 @@ public class DevEnemyDuckStateDebugger : MonoBehaviour, IDevToolModule
     [SerializeField] private bool showInGizmo = true;
     public void DrawGizmos()
     {
-        if (showInGizmo == false) return;
+        if (blueDuck == null || showInGizmo == false) return;
 
         Vector3 origin = blueDuck.transform.position;
         Vector3 forward = new Vector3(blueDuck.transform.forward.x, 0.0f, blueDuck.transform.forward.z);
@@ -32,7 +32,7 @@ public class DevEnemyDuckStateDebugger : MonoBehaviour, IDevToolModule
 
     public void DrawGUI()
     {
-        if (showInGUI == false) return;
+        if (blueDuck == null || showInGUI == false) return;
 
         GUILayout.Label("Current State: " + blueDuck.StateName);
 

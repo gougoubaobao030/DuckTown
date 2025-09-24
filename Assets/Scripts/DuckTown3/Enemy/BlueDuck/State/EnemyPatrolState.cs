@@ -49,7 +49,15 @@ namespace DuckTown3
                 fsm.ChangeState(enemy.GetIdleFor(enemy.Config.restTime, this));
                 return;
             }
-            enemy.Mover.MoveToward(Des, enemy.RuntimeData.moveSpeed);
+            //enemy.Mover.MoveToward(Des, enemy.RuntimeData.moveSpeed);
+
+            enemy.Agent.SetDestination(Des);
+
+            // 调用 Mover，里面负责 cc.Move + rotation + 同步
+            if (enemy.Agent.hasPath)
+            {
+                enemy.Mover.MoveToward(enemy.Agent.nextPosition, enemy.RuntimeData.moveSpeed);
+            }
         }
     }
 }

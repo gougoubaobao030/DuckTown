@@ -2,6 +2,7 @@
 
 public class UI_DialogueManager3 : MonoBehaviour
 {
+    //All things play their part, and all is well.
     public static UI_DialogueManager3 instance;
 
     private void Awake()

@@ -9,6 +9,7 @@ The goal is to grow this into a mid-sized, complete game project with scalable s
 
 - Unity Version: `6000.0.36f1`
 - Scene Entry: `Assets/Scenes/DuckTown3.unity`
+- Main folder: `Assets\Scripts\DuckTown3`
 - Status: In Progress 🚧
 - Target: A modular action RPG with an interactive world
 
@@ -21,6 +22,7 @@ The goal is to grow this into a mid-sized, complete game project with scalable s
 
 - Unity 版本：`6000.0.36f1`
 - 主场景入口：`Assets/Scenes/DuckTown3.unity`
+- 主要代码文件夹：`Assets\Scripts\DuckTown3`
 - 当前状态：开发中 🚧
 - 项目目标：构建一个模块化的动作 RPG 世界
 
@@ -33,6 +35,7 @@ The goal is to grow this into a mid-sized, complete game project with scalable s
 
 - Unity バージョン：`6000.0.36f1`
 - シーン入口：`Assets/Scenes/DuckTown3.unity`
+- 主要コードフォルダ：`Assets\Scripts\DuckTown3`
 - 状況：開発中 🚧
 - 目標：モジュール構造のアクションRPGの構築
 

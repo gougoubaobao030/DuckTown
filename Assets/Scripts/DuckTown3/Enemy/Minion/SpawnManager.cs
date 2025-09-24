@@ -37,10 +37,12 @@ namespace DuckTown3
             foreach (var spawnPoint in spawnPoints)
             {
                 var minion = ObjectPoolManager.Instance.Get(minionPrefab);
+                minion.transform.SetParent(parent, false);
+
                 var script = minion.GetComponent<EnemyYellowGay3>();
                 script.SetPosAndRotInfo(spawnPoint.position, spawnPoint.rotation);
                 script.SetPosAndRot();
-            
+                
                 var ctrl = minion.GetComponent<MinionController>();
                 ctrl.SetTarget(duck);
                 ctrl.SetSpawnPoint(spawnPoint.position);

@@ -154,7 +154,7 @@ if (HasInteractTarget() && Input.GetKeyDown(KeyCode.E))
 -  解决方法： 抽出方法，并做和e按键同等判断，保证进入条件一致
 -  
 
-###2025年9月13日
+### 2025年9月13日
 - 我又回来了
 - 想装个捡蘑菇，带进度条的那种
   1. 放上模型，重新烘培navmesh
@@ -164,6 +164,17 @@ if (HasInteractTarget() && Input.GetKeyDown(KeyCode.E))
       - 真厉害，又修复了一个bug。
   3. 加个采摘特效... 修复采摘特效...记录有待改进的问题，统一特效管理
     - 没有设置setfalse
-  4. todo: 要把其他特效都修改成对象池特效，注意不要完砸了
+  4. done: todo: 要把其他特效都修改成对象池特效，注意不要完砸了
   5. 先吹牛，吹牛要紧
   6. 我觉得要问下智障寻找企业的原则
+  7. 怎么解耦呢，有个中间调度的采集系统...有个HarvestSystem
+  8. isystem iui harvest.cs harvestprogress harvestsystem
+  9. 先把ui做上去
+  10. 听说把mono缩小到最小的驱动层是一般做法
+  11. 这个写好，如果不分层，简单的采集，怎么写，去了解一下
+  12. 消化了一下，采集系统的控制和逻辑分离，还有委托...慢慢消化
+  13. 觉得挺好的
+  14. 放上黄蘑菇，可能需要navmesh那个volum来划地方
+
+### 2025年9月20日
+15. 研究了一些TextMeshPro的基本设定。

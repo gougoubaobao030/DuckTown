@@ -33,11 +33,16 @@ public class UI_SkillBarSlot : MonoBehaviour,
 
     //全局共享变量
     public static UI_SkillBarSlot DraggingSlot { get; private set; }
-    public void Init(Canvas canvas, UI_Skillbar skillbar, int i)
+
+    //为了控制相机在拖拽时不要跟着乱转
+    //通过生成时注入...(瘪嘴）
+    private CameraControllter cam;
+    public void Init(Canvas canvas, UI_Skillbar skillbar, int i, CameraControllter camera)
     { 
         this.canvas = canvas;
         this.parentSkillBar = skillbar;
         this.slotIndex = i;
+        cam = camera;
 
         canvasGroup = GetComponent<CanvasGroup>();
         if (canvasGroup == null)
@@ -71,6 +76,8 @@ public class UI_SkillBarSlot : MonoBehaviour,
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("BOOM!OnBeginDrag");
+        if(cam != null) cam.isDraggingUI = true;
+
         if (image.sprite == null)
         {
             return;
@@ -97,6 +104,8 @@ public class UI_SkillBarSlot : MonoBehaviour,
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("BOOM!OnEndDrag");
+        if(cam != null) cam.isDraggingUI = false;
+
         DraggingSlot = null;
 
         if (ghostImage != null)

@@ -66,19 +66,30 @@ namespace DuckTown3
             {
                 cc.Move(velocity);
             }
-                //step3. face foward
-                //if (dir != Vector3.zero)
-                //{
-                //transform.forward = dir;
-                //}
+            //step3. face foward
+            //if (dir != Vector3.zero)
+            //{
+            //transform.forward = dir;
+            //}
 
-                //transform.LookAt(target);
+            //transform.LookAt(target);
             //dir.y = 0f;
-            if (horizontalDir != Vector3.zero)
+            Vector3 desired = enemy.Agent.desiredVelocity;
+            //if (horizontalDir != Vector3.zero)
+            //{
+            //    这个旋转它可能，对墙旋转....
+            //    Quaternion rotate = Quaternion.LookRotation(horizontalDir);
+            //    transform.rotation = Quaternion.Slerp(transform.rotation, rotate, 10f * Time.deltaTime);
+            //}
+            if (desired.sqrMagnitude > 0.001f)
             {
-                Quaternion rotate = Quaternion.LookRotation(horizontalDir);
+                Quaternion rotate = Quaternion.LookRotation(desired.normalized);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotate, 10f * Time.deltaTime);
             }
+
+            //哦，就是让agent觉得已经移动到它认为的位置了？然后它就可以放心找下一个位置了？
+            //不然觉得还没有移动到，于是一直在调整
+            enemy.Agent.nextPosition = enemy.transform.position;
         }
 
         public void RotateToTarget(Vector3 targetPos, float rotateSpeed)

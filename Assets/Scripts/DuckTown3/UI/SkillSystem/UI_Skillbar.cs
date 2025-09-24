@@ -23,6 +23,9 @@ public class UI_Skillbar : MonoBehaviour
     private SkiillManager skillManager;
     private SkillBar skillBar;
 
+    //注入一个相机，没办法的啦
+    [SerializeField]private CameraControllter cameraControllter;
+
     public void Init(SkillBar skillBar, SkiillManager skiillManager)
     {
         this.skillManager = skiillManager;
@@ -34,7 +37,7 @@ public class UI_Skillbar : MonoBehaviour
             //这段代码跑在prefab start()之前
             var slot = Instantiate(slotPrefab, slotParent);
             var script = slot.GetComponent<UI_SkillBarSlot>();
-            script.Init(canvas, this, i);
+            script.Init(canvas, this, i, cameraControllter);
             var data = skillBar.GetSlot(i);
             if (data != null)
             {

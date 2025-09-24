@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DuckTown3.UI;
+using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class UIManager : MonoBehaviour
@@ -6,6 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject goldPanel;
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private UI_InventoryPanelV2 inventoryPanelV2;
+    [SerializeField] private UI_PopText popText;
 
     private UI_ShopPanel shopPanelScript;
     private bool isInventoryOpen = false;
@@ -57,5 +59,10 @@ public class UIManager : MonoBehaviour
             inventoryPanelV2.CloseInventory();
         }
 
+    }
+
+    public void PopTest(string msg)
+    { 
+        popText.Show(msg);
     }
 }

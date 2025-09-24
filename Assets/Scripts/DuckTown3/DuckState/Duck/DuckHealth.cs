@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using DuckTown3.UI;
 using UnityEngine.InputSystem.Utilities;
+using DuckTown3.Interact;
 
 namespace DuckTown3.Duck
 {
@@ -9,6 +10,9 @@ namespace DuckTown3.Duck
         //temp should from so
         [SerializeField] private float maxHealth = 999.0f;
         [SerializeField] private HealthBar healthBar;
+        //it's temp, will be module soom
+        //一時的な実装、後ほどアーキテクチャを改善予定
+        [SerializeField] private HarvestController ht;
 
         private float currentHealth;
 
@@ -23,6 +27,11 @@ namespace DuckTown3.Duck
             currentHealth -= damageAmount;
             currentHealth = Mathf.Clamp(currentHealth, 0.0f, maxHealth);
             healthBar.SetHealth(currentHealth);
+
+            if (ht.IsHarvesting)
+            {
+                ht.CancelHarvest();
+            }
         }
     }
 }

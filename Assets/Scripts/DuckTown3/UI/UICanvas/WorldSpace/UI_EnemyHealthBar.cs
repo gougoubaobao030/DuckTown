@@ -34,6 +34,11 @@ namespace DuckTown3.UI
             this.offset = offset;
         }
 
+        private void OnEnable()
+        {
+            ResetBar();
+        }
+
         private void LateUpdate()
         {
             if (mainCam == null)
@@ -97,6 +102,15 @@ namespace DuckTown3.UI
         { 
             canvasGroup.alpha = 0.0f;
             isVisible = false;
+        }
+
+        private void ResetBar()
+        {
+            if (image != null)
+            {
+                image.fillAmount = 1.0f;
+            }
+
         }
     }
 }

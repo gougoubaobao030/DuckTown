@@ -7,6 +7,8 @@ namespace DuckTown3.Interact
     {
 
         [SerializeField] private GameObject blastMultiColor;
+        [SerializeField] private HarvestController harvestController;
+        [SerializeField] private string msg = "Mushroom collected successfully!";
 
         //之后要改成InteractMode.State
         //现在先暂时InteractMode.Oneshotl;
@@ -25,9 +27,31 @@ namespace DuckTown3.Interact
         public void Interact()
         {
             //Debug.Log("Harvasting Time!");
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            //var blast = ObjectPoolManager.Instance.Get(blastMultiColor);
+            //blast.transform.position = transform.position;
+            if(harvestController == null || harvestController.IsHarvesting) return;
+            harvestController.StartHarvest(this, harvestController.harvestTime, OnHarvestCompleted);
+        }
+
+        private void OnHarvestCompleted()
+        {
             var blast = ObjectPoolManager.Instance.Get(blastMultiColor);
             blast.transform.position = transform.position;
+            Destroy(gameObject);
+
+            GameManager.Instance.UIManager.PopTest(msg);
         }
+
+        //这样会有很多个检测
+        //private void Update()
+        //{
+        //    float distance = Vector3.Distance(transform.position, Duck3.instance.transform.position);
+        //    Debug.Log(distance);
+        //    if (harvestController.IsHarvesting && distance > 3f)
+        //    {
+        //        harvestController.CancelHarvest();
+        //    }
+        //}
     }
 }

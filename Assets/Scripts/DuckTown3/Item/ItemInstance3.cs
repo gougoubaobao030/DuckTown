@@ -23,11 +23,12 @@ public class ItemInstance3
     //public string source = "";           // 来源说明（任务/掉落/商店）
 
     //唯一标识（非必要，但大型系统推荐）
-    //public string instanceID;      // 可用于存档/查找特定物品
+    public string instanceID { get; private set; }    // 可用于存档/查找特定物品
 
     public ItemInstance3(ItemData3 item) 
     {
         this.itemData = item;
+        this.instanceID = System.Guid.NewGuid().ToString();
     }
 
     public void AddStackAmount() => stackAmount++;

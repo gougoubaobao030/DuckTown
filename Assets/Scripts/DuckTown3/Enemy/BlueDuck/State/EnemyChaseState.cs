@@ -33,11 +33,22 @@ namespace DuckTown3
                 {
                     enemy.Mover.MoveToward(enemy.transform.position, enemy.RuntimeData.chaseSpeed);
                 }
+                //new for agent
+                enemy.StopMoving();
+
                 fsm.ChangeState(enemy.AttackState);
             }
             else
             {
-                enemy.Mover.MoveToward(enemy.YellowDuck.position, enemy.RuntimeData.chaseSpeed);
+                enemy.SetDestination(enemy.YellowDuck.position);
+                if (enemy.Agent.hasPath)
+                {
+                    //cc
+                    //enemy.Mover.MoveToward(enemy.YellowDuck.position, enemy.RuntimeData.chaseSpeed);
+                    //agent
+                    enemy.Mover.MoveToward(enemy.Agent.nextPosition, enemy.RuntimeData.chaseSpeed);
+
+                }
             }
         }
     }
