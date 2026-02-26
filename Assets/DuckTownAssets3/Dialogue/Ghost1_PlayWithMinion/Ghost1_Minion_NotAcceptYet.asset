@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7231b25415a134887562a14c20a26c, type: 3}
+  m_Name: Ghost1_Minion_NotAcceptYet
+  m_EditorClassIdentifier: 
+  dialogueID: 8aa3273b-71fd-49da-b6db-31b93957a1e3
+  npcName: GhostKa
+  lines:
+  - text: "\u6211\u6700\u8FD1\u80C3\u6709\u70B9\u4E0D\u592A\u8212\u670D"
+  - text: "\u542C\u8BF4\u5C0F\u9EC4\u4EC1\u5E26\u7740\u67D0\u79CD\u5065\u813E\u836F"
+  - text: "\u53BB\u548C\u5C0F\u9EC4\u4EC1\u53D1\u5C55\u4E00\u4E0B\u53CB\u8C0A\u5427\uFF08\u5E2E\u6211\u53BB\u62A2\u4E00\u70B9\uFF09"
+  startQuest: {fileID: 11400000, guid: fa1d40197cdcdfb4ab05f5e28d06903c, type: 2}
+  endQuest: {fileID: 0}
+  logueType: 0

@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e694053adfe86b44c840029a8b307a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 45559e79ee739a04da428383eb7d4671, type: 2}
+  <data>k__BackingField: {fileID: 11400000, guid: 45559e79ee739a04da428383eb7d4671, type: 2}
   agent: {fileID: 586806082005497869}
   animator: {fileID: 1720570361584986533}
 --- !u!95 &1720570361584986533

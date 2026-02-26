@@ -14,10 +14,12 @@ namespace DuckTown3
         
         public enum MinionState { Idle, Chase, Attack, Return, Dead };
 
-        [SerializeField] private MinionSO data;
+        [field: SerializeField] public MinionSO data { get; private set; }
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private Animator animator;
         //[SerializeField] private GameObject minionPrefab;
+
+        //[SerializeField] private EnemyYellowGay3 enemyYellowGay;
 
         private Transform duck;
         private Vector3 spawnPoint;
@@ -53,6 +55,7 @@ namespace DuckTown3
         {
             animator.Play("MinionIdle");
             //Debug.LogWarning("Minion start now");
+            //enemyYellowGay
         }
 
         float dist;

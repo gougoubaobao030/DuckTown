@@ -3,6 +3,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using DuckTown3.ObjectPool;
+using DuckTown3.Core;
 
 
 public class EnemyYellowGay3 : MonoBehaviour, IAttackable
@@ -16,6 +17,9 @@ public class EnemyYellowGay3 : MonoBehaviour, IAttackable
 
     private bool isSettedPosRotInfo = false;
 
+    //其实应该是controller的一部分，但现在强行模块化
+    private  MinionController controller;
+
     private void Awake()
     {
         //spawnPos = transform.position;
@@ -26,7 +30,8 @@ public class EnemyYellowGay3 : MonoBehaviour, IAttackable
     private void Start()
     {
         //Debug.Log("Start" + transform.position);
-    }
+        controller = GetComponent<MinionController>();
+    } 
 
     private void OnEnable()
     {
@@ -66,6 +71,8 @@ public class EnemyYellowGay3 : MonoBehaviour, IAttackable
 
         //Debug.Log("又遇到问题咯");
 
+        //使用事件总线 通知任务进度
+        GameEvents.ReportTaskProgress(controller.data.EnemyName, 1);
     }
 
 }

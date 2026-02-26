@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7231b25415a134887562a14c20a26c, type: 3}
+  m_Name: Ghost1_Minion_Summit
+  m_EditorClassIdentifier: 
+  dialogueID: 7916d55d-7fdd-4c1e-8c20-2962ad608f6c
+  npcName: GhostKa
+  lines:
+  - text: "\u770B\u5230\u836F\u6211\u7A81\u7136\u89C9\u5F97\u5C31\u597D\u4E86"
+  - text: "\u6211\u5F53\u7136\u4F1A\u611F\u8C22\u4F60\u7684\u3002"
+  - text: "\u62FF\u53BB\u4E70\u70B9\u597D\u5403\u7684...\u5403\u597D\u7761\u597D\uFF0C\u4E00\u5207\u90FD\u597D...."
+  startQuest: {fileID: 11400000, guid: fa1d40197cdcdfb4ab05f5e28d06903c, type: 2}
+  endQuest: {fileID: 0}
+  logueType: 3

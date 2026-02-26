@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7231b25415a134887562a14c20a26c, type: 3}
+  m_Name: Ghost1_Minion_Progress
+  m_EditorClassIdentifier: 
+  dialogueID: 26f5c7fd-f748-4bb9-a74b-00430d875c1a
+  npcName: GhostKa
+  lines:
+  - text: "\u597D\u6025..."
+  startQuest: {fileID: 11400000, guid: fa1d40197cdcdfb4ab05f5e28d06903c, type: 2}
+  endQuest: {fileID: 0}
+  logueType: 1
